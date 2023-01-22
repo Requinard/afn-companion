@@ -1,3 +1,5 @@
+import "@fontsource/roboto/latin.css";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
@@ -7,6 +9,7 @@ import {
     ThemeProvider,
 } from "@mui/material";
 import { purple } from "@mui/material/colors";
+import { BrowserRouter } from "react-router-dom";
 
 import { App } from "./App";
 
@@ -21,11 +24,13 @@ const theme = createTheme({
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
-        <StyledEngineProvider>
-            <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <App />
-            </ThemeProvider>
-        </StyledEngineProvider>
+        <BrowserRouter>
+            <StyledEngineProvider>
+                <ThemeProvider theme={theme}>
+                    <CssBaseline />
+                    <App />
+                </ThemeProvider>
+            </StyledEngineProvider>
+        </BrowserRouter>
     </React.StrictMode>
 );
