@@ -1,12 +1,11 @@
 import { Grid, useTheme } from "@mui/material";
-import { Image } from "mui-image";
 
 import { Row } from "../Layout/Row";
 
-import LogoImage from "./assets/logo.png?format=webp&imagetools";
 import { AboutUsCard } from "./AboutUsCard";
 import { LocationCard } from "./LocationCard";
 import { FAQ } from "./FAQ";
+import { Logo } from "./Logo";
 
 export const HomePage = () => {
     const theme = useTheme();
@@ -33,14 +32,7 @@ export const HomePage = () => {
                         },
                     }}
                 >
-                    <Image
-                        src={LogoImage}
-                        alt={"The alfurnative dates"}
-                        duration={1000}
-                        shiftDuration={100}
-                        fit={"contain"}
-                        height={"30vh"}
-                    />
+                    <Logo />
                 </Grid>
             </Row>
             <Row sx={{ pt: 4, pb: 4 }}>
