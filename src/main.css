@@ -1,0 +1,8 @@
+body {
+    overflow-x: hidden;
+}
+
+.iconified {
+    width: 32px;
+    height: 32px;
+}
