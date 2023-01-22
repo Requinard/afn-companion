@@ -1,10 +1,10 @@
 import {
     Link,
     List,
+    ListItem,
     ListItemButton,
     ListItemIcon,
     ListItemText,
-    ListSubheader,
 } from "@mui/material";
 
 import TelegramIcon from "~icons/ic/sharp-telegram";
@@ -12,7 +12,12 @@ import TwitterIcon from "~icons/mdi/twitter";
 
 export const Contacts = () => (
     <List dense>
-        <ListSubheader disableSticky>Get in touch</ListSubheader>
+        <ListItem>
+            <ListItemText
+                primary={"Get in touch"}
+                primaryTypographyProps={{ variant: "h4" }}
+            />
+        </ListItem>
         <ListItemButton
             component={Link}
             href={"https://t.me/Alfurnative"}
@@ -42,6 +47,7 @@ export const Contacts = () => (
             />
         </ListItemButton>
         <ListItemButton
+            disabled
             component={Link}
             href={"https://twitter.com/TheAlfurnative"}
             rel={"noopener"}
@@ -53,7 +59,7 @@ export const Contacts = () => (
             <ListItemText
                 primary={"@TheAlfurnative"}
                 secondary={
-                    "Our Twitter, however, it is currently suspended due to a crypto-bot attack. We are working to resolve this."
+                    "Our twitter has been suspended due to cryptobots. It'll be back"
                 }
             />
         </ListItemButton>

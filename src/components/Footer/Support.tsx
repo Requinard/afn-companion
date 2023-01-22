@@ -1,17 +1,22 @@
 import {
     Link,
     List,
+    ListItem,
     ListItemButton,
     ListItemIcon,
     ListItemText,
-    ListSubheader,
 } from "@mui/material";
 
 import PawIcon from "~icons/mdi/paw";
 
 export const Support = () => (
     <List dense>
-        <ListSubheader disableSticky>Support</ListSubheader>
+        <ListItem>
+            <ListItemText
+                primary={"Support"}
+                primaryTypographyProps={{ variant: "h4" }}
+            />
+        </ListItem>
         <ListItemButton
             component={Link}
             href={"https://universe.com/"}

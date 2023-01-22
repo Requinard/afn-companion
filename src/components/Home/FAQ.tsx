@@ -1,7 +1,14 @@
-import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
+import {
+    Accordion,
+    AccordionDetails,
+    AccordionSummary,
+    Card,
+    CardHeader,
+} from "@mui/material";
 
 export const FAQ = () => (
-    <>
+    <Card>
+        <CardHeader title={"F.A.Q"} />
         <Accordion>
             <AccordionSummary>Is there parking nearby?</AccordionSummary>
             <AccordionDetails>
@@ -56,5 +63,5 @@ export const FAQ = () => (
                 18. Security may check your ID card at entry.
             </AccordionDetails>
         </Accordion>
-    </>
+    </Card>
 );
