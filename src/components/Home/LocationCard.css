@@ -1,7 +1,15 @@
 .leaflet-marker-venue {
-    color: blue;
+    background-color: #e912e3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .leaflet-marker-parking {
-    color: red;
+    background-color: #e53935;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
