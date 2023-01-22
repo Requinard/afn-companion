@@ -15,7 +15,12 @@ export function App() {
             <Box>
                 <NavBar />
             </Box>
-            <Box flex={1} display={"flex"} flexDirection={"column"}>
+            <Box
+                flex={1}
+                display={"flex"}
+                flexDirection={"column"}
+                overflow={"auto"}
+            >
                 <AppRoutes />
             </Box>
         </Box>

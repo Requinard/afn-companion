@@ -1,5 +1,7 @@
 import { Box } from "@mui/material";
 
+import LogoImage from "./assets/logo.png?format=webp&imagetools";
+
 export const HomePage = () => (
     <Box
         display={"flex"}
@@ -7,12 +9,6 @@ export const HomePage = () => (
         alignItems={"center"}
         flex={1}
     >
-        <img
-            src={
-                "https://alfurnative.nl/Resources/logoAlfurnativeColorText.png"
-            }
-            height={400}
-            alt={"The alfunrative dates"}
-        />
+        <img src={LogoImage} height={400} alt={"The alfunrative dates"} />
     </Box>
 );
