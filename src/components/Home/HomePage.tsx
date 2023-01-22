@@ -6,6 +6,7 @@ import { AboutUsCard } from "./AboutUsCard";
 import { LocationCard } from "./LocationCard";
 import { FAQ } from "./FAQ";
 import { Logo } from "./Logo";
+import { Staff } from "./Staff";
 
 export const HomePage = () => {
     const theme = useTheme();
@@ -44,6 +45,7 @@ export const HomePage = () => {
                 </Grid>
             </Row>
             <LocationCard />
+            <Staff />
         </>
     );
 };
