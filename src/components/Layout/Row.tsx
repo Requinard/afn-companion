@@ -8,7 +8,12 @@ type RowProps = {
 export const Row = ({ children, sx }: PropsWithChildren<RowProps>) => (
     <Box sx={sx}>
         <Container maxWidth={"xl"}>
-            <Grid container spacing={2} alignItems={"center"}>
+            <Grid
+                container
+                spacing={2}
+                alignItems={"center"}
+                justifyContent={"space-around"}
+            >
                 {children}
             </Grid>
         </Container>

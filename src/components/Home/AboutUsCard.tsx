@@ -1,13 +1,4 @@
-import {
-    Button,
-    ButtonGroup,
-    Card,
-    CardActions,
-    CardContent,
-    CardHeader,
-    Tooltip,
-    Typography,
-} from "@mui/material";
+import { Card, CardContent, CardHeader, Typography } from "@mui/material";
 
 import PawIcon from "~icons/mdi/paw";
 
@@ -49,13 +40,5 @@ export const AboutUsCard = () => (
                 as the years come and go.
             </Typography>
         </CardContent>
-        <CardActions>
-            <ButtonGroup fullWidth>
-                <Button color={"success"}>Order day tickets</Button>
-                <Tooltip title={"Sorry, all hotel tickets have been sold"}>
-                    <Button color={"error"}>Order Hotel tickets</Button>
-                </Tooltip>
-            </ButtonGroup>
-        </CardActions>
     </Card>
 );
