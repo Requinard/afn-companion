@@ -1,14 +1,17 @@
 import "@fontsource/roboto/latin.css";
-
+import "leaflet/dist/leaflet.css";
+import "leaflet/dist/leaflet";
+import "./main.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
     createTheme,
     CssBaseline,
+    darken,
+    lighten,
     StyledEngineProvider,
     ThemeProvider,
 } from "@mui/material";
-import { purple } from "@mui/material/colors";
 import { BrowserRouter } from "react-router-dom";
 
 import { App } from "./App";
@@ -17,7 +20,20 @@ const theme = createTheme({
     palette: {
         mode: "dark",
         primary: {
-            main: purple[600],
+            light: lighten("#e912e3", 0.5),
+            main: "#e912e3",
+            dark: darken("#e912e3", 0.5),
+            contrastText: "#f1f1f1",
+        },
+    },
+    components: {
+        MuiCardHeader: {
+            defaultProps: {
+                titleTypographyProps: {
+                    color: "primary.main",
+                    variant: "h5",
+                },
+            },
         },
     },
 });

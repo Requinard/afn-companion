@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 
 import { NavBar } from "./components/NavBar";
 import { AppRoutes } from "./AppRoutes";
+import { Footer } from "./components/Footer/Footer";
 
 export function App() {
     return (
@@ -11,6 +12,7 @@ export function App() {
             width={"100vw"}
             display={"flex"}
             flexDirection={"column"}
+            overflow={"none"}
         >
             <Box>
                 <NavBar />
@@ -23,6 +25,7 @@ export function App() {
             >
                 <AppRoutes />
             </Box>
+            <Footer />
         </Box>
     );
 }
