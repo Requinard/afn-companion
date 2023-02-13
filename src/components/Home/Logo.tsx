@@ -1,7 +1,7 @@
 import { Image } from "mui-image";
 import { animated, useSpring } from "@react-spring/web";
 
-import LogoImage from "./assets/logo-2023.png?format=avif&height=475&imagetools";
+import LogoImage from "./assets/logo-2023.png?format=png&height=475&imagetools";
 
 export const Logo = () => {
     const props = useSpring({
