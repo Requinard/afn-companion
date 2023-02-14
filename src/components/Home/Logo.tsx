@@ -1,7 +1,7 @@
 import { Image } from "mui-image";
 import { animated, useSpring } from "@react-spring/web";
 
-import LogoImage from "./assets/logo.png?format=webp&imagetools";
+import LogoImage from "./assets/logo-2023.png";
 
 export const Logo = () => {
     const props = useSpring({
@@ -10,7 +10,7 @@ export const Logo = () => {
         },
         to: [{ scale: 1.05 }, { scale: 1.03 }, { scale: 1.05 }, { scale: 1 }],
         loop: true,
-        delay: 1250,
+        delay: 7500,
         config: {
             duration: 200,
         },
@@ -23,11 +23,11 @@ export const Logo = () => {
         >
             <Image
                 src={LogoImage}
-                alt={"The alfurnative dates"}
+                alt={"The Alfurnative dates"}
                 duration={1000}
                 shiftDuration={100}
                 fit={"contain"}
-                height={"30vh"}
+                height={475}
             />
         </animated.div>
     );

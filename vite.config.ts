@@ -21,4 +21,19 @@ export default defineConfig({
             defaultClass: "iconified",
         }),
     ],
+    build: {
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    mui: ["@mui/material", "@emotion/react", "@emotion/styled"],
+                    react: [
+                        "react",
+                        "react-dom",
+                        "react-leaflet",
+                        "react-router-dom",
+                    ],
+                },
+            },
+        },
+    },
 });

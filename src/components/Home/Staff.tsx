@@ -1,12 +1,12 @@
 import { Grid } from "@mui/material";
 import { Image } from "mui-image";
 
-import Hunter from "./assets/staff-hunter.png?height=500&format=webp&imagetools";
-import Lighty from "./assets/staff-lighty.png?height=500&format=webp&imagetools";
-import Avi from "./assets/staff-avi.png?height=500&format=webp&imagetools";
-import Dibs from "./assets/staff-dibs.png?height=500&format=webp&imagetools";
-import Mylune from "./assets/staff-mylunee.png?height=500&format=webp&imagetools";
-import Switch from "./assets/staff-switch.png?height=500&format=webp&imagetools";
+import Hunter from "./assets/staff-hunter.png?height=500&format=avif&imagetools";
+import Lighty from "./assets/staff-lighty.png?height=500&format=avid&imagetools";
+import Avi from "./assets/staff-avi.png?height=500&format=avid&imagetools";
+import Dibs from "./assets/staff-dibs.png?height=500&format=avif&imagetools";
+import Mylune from "./assets/staff-mylunee.png?height=500&format=avif&imagetools";
+import Switch from "./assets/staff-switch.png?height=500&format=avif&imagetools";
 
 type StaffMemberProps = {
     image: string;

@@ -20,10 +20,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.0",
-    "react-router-dom": "^6.7.0",
-    "vite-plugin-checker": "^0.5.4"
+    "react-router-dom": "^6.7.0"
   },
   "devDependencies": {
+    "vite-plugin-checker": "^0.5.4",
     "@iconify/json": "^2.2.10",
     "@requinard/eslint-config": "^0.3.2",
     "@svgr/core": "^6.5.1",
