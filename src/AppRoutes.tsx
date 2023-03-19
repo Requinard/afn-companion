@@ -1,9 +1,19 @@
-import { Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { HomePage } from "./components/Home/HomePage";
+import { Dashboard } from "./components";
 
-export const AppRoutes = () => (
-    <Routes>
-        <Route path={"/"} element={<HomePage />} />
-    </Routes>
-);
+const routes = createBrowserRouter([
+    {
+        path: "/",
+        element: <Dashboard />,
+        children: [
+            {
+                path: "",
+                element: <HomePage />,
+            },
+        ],
+    },
+]);
+
+export const AppRoutes = () => <RouterProvider router={routes} />;
