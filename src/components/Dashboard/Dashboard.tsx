@@ -1,5 +1,6 @@
 import { Box, styled } from "@mui/material";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 import { Footer } from "../Footer";
 
@@ -22,6 +23,12 @@ const MainSection = styled(Box)(({ theme }) => ({
 }));
 
 export const Dashboard = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        document.querySelector("main")?.scrollTo({ top: 0 });
+    }, [location]);
+
     return (
         <DashboardInner>
             <MainSection component={"main"} role={"main"}>
