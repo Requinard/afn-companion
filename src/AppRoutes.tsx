@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { Dashboard, HomeRoute } from "./components";
+import { ResearchAndDevelopmentRoute } from "./components/ResearchAndDevelopment/ResearchAndDevelopmentRoute";
 
 const routes = createBrowserRouter([
     {
@@ -10,6 +11,10 @@ const routes = createBrowserRouter([
             {
                 path: "",
                 element: <HomeRoute />,
+            },
+            {
+                path: "/research-and-development",
+                element: <ResearchAndDevelopmentRoute />,
             },
         ],
     },
