@@ -9,7 +9,7 @@ import {
 import type { BottomNavigationActionProps } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 
-import { useHasScrolled } from "./useHasScrolled";
+import { useHasScrolled } from "../../hooks";
 
 import HomeIcon from "~icons/mdi/paw";
 import RAndDIcon from "~icons/material-symbols/science-outline";

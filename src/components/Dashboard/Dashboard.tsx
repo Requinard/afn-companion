@@ -1,8 +1,8 @@
 import { Box, styled } from "@mui/material";
-import { Outlet, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Outlet } from "react-router-dom";
 
 import { Footer } from "../Footer";
+import { useAutoScroll } from "../../hooks";
 
 import { Navigation, NavigationSpacer } from "./Navigation";
 
@@ -20,12 +20,7 @@ const MainSection = styled(Box)({
 });
 
 export const Dashboard = () => {
-    const location = useLocation();
-
-    useEffect(() => {
-        document.querySelector("main")?.scrollTo({ top: 0 });
-    }, [location]);
-
+    useAutoScroll();
     return (
         <DashboardInner>
             <MainSection component={"main"} role={"main"}>
