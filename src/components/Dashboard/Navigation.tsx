@@ -1,16 +1,37 @@
-import type { BottomNavigationActionProps } from "@mui/material";
 import {
+    styled,
     BottomNavigation,
     BottomNavigationAction,
     Collapse,
     Paper,
+    Box,
 } from "@mui/material";
+import type { BottomNavigationActionProps } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 
 import { useHasScrolled } from "./useHasScrolled";
 
 import HomeIcon from "~icons/mdi/paw";
 import RAndDIcon from "~icons/material-symbols/science-outline";
+
+const NAV_HEIGHT = 70;
+
+const CustomCollapse = styled(Collapse)({
+    position: "fixed",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    zIndex: 1600,
+});
+
+const CustomBottomNavigation = styled(BottomNavigation)({
+    height: NAV_HEIGHT,
+});
+
+export const NavigationSpacer = styled(Box)({
+    height: NAV_HEIGHT,
+    bgcolor: "primary.dark",
+});
 
 export const BottomNavigationLink = (
     props: Pick<BottomNavigationActionProps, "label" | "icon" | "value">
@@ -24,15 +45,9 @@ export const Navigation = () => {
     const location = useLocation();
     const hasScrolled = useHasScrolled();
     return (
-        <Collapse in={hasScrolled} timeout={150}>
+        <CustomCollapse in={hasScrolled}>
             <Paper elevation={3} role={"navigation"}>
-                <BottomNavigation
-                    sx={{
-                        height: 70,
-                    }}
-                    showLabels
-                    value={location.pathname}
-                >
+                <CustomBottomNavigation showLabels value={location.pathname}>
                     <BottomNavigationLink
                         label={"Home"}
                         icon={<HomeIcon />}
@@ -43,8 +58,8 @@ export const Navigation = () => {
                         icon={<RAndDIcon />}
                         label={"R&D"}
                     />
-                </BottomNavigation>
+                </CustomBottomNavigation>
             </Paper>
-        </Collapse>
+        </CustomCollapse>
     );
 };

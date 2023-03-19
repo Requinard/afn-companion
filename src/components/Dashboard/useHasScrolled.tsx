@@ -1,37 +1,10 @@
-import { useLayoutEffect, useState } from "react";
-import { debounce } from "@mui/material";
-
-const getMainScroll = (): number => {
-    const main = document.getElementsByTagName("main").item(0);
-
-    if (main === null) {
-        return NaN;
-    }
-
-    return main.scrollTop;
-};
+import { useWindowScroll } from "react-use";
+import { useMemo } from "react";
 
 export const useHasScrolled = () => {
-    const [hasScrolled, setHasScrolled] = useState<boolean>(
-        () => getMainScroll() >= 100
-    );
+    const { y } = useWindowScroll();
 
-    useLayoutEffect(() => {
-        const onscroll = debounce(() => {
-            setHasScrolled(getMainScroll() >= 100);
-        }, 100);
-        const mainEl = document.getElementsByTagName("main").item(0);
-
-        if (mainEl === null) {
-            return;
-        }
-
-        mainEl.addEventListener("scroll", onscroll);
-
-        return () => {
-            mainEl.removeEventListener("scroll", onscroll);
-        };
-    }, [setHasScrolled]);
-
-    return hasScrolled;
+    return useMemo(() => {
+        return y > 0;
+    }, [y]);
 };

@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 import { Footer } from "../Footer";
 
-import { Navigation } from "./Navigation";
+import { Navigation, NavigationSpacer } from "./Navigation";
 
 const DashboardInner = styled(Box)({
     height: "100vh",
@@ -13,14 +13,11 @@ const DashboardInner = styled(Box)({
     flexDirection: "column",
 });
 
-const MainSection = styled(Box)(({ theme }) => ({
+const MainSection = styled(Box)({
     display: "flex",
     flexDirection: "column",
     flex: 1,
-    maxHeight: "100%",
-    overflowY: "auto",
-    mb: theme.spacing(5),
-}));
+});
 
 export const Dashboard = () => {
     const location = useLocation();
@@ -34,6 +31,7 @@ export const Dashboard = () => {
             <MainSection component={"main"} role={"main"}>
                 <Outlet />
                 <Footer />
+                <NavigationSpacer />
             </MainSection>
             <Navigation />
         </DashboardInner>
