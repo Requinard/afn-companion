@@ -5,7 +5,7 @@ import { EventDetails } from "./EventDetails";
 import { Support } from "./Support";
 
 export const Footer = () => (
-    <Box sx={{ bgcolor: "primary.dark" }}>
+    <Box sx={{ bgcolor: "primary.dark" }} role={"footer"} component={"footer"}>
         <Container sx={{ bgcolor: "primary.dark", p: 2 }}>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={4}>

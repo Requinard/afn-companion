@@ -12,9 +12,8 @@ import {
     StyledEngineProvider,
     ThemeProvider,
 } from "@mui/material";
-import { BrowserRouter } from "react-router-dom";
 
-import { App } from "./App";
+import { AppRoutes } from "./AppRoutes";
 
 const theme = createTheme({
     palette: {
@@ -40,13 +39,11 @@ const theme = createTheme({
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
-        <BrowserRouter>
-            <StyledEngineProvider>
-                <ThemeProvider theme={theme}>
-                    <CssBaseline />
-                    <App />
-                </ThemeProvider>
-            </StyledEngineProvider>
-        </BrowserRouter>
+        <StyledEngineProvider>
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <AppRoutes />
+            </ThemeProvider>
+        </StyledEngineProvider>
     </React.StrictMode>
 );

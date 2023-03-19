@@ -1,9 +1,23 @@
-import { Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { HomePage } from "./components/Home/HomePage";
+import { Dashboard, HomeRoute } from "./components";
+import { ResearchAndDevelopmentRoute } from "./components/ResearchAndDevelopment/ResearchAndDevelopmentRoute";
 
-export const AppRoutes = () => (
-    <Routes>
-        <Route path={"/"} element={<HomePage />} />
-    </Routes>
-);
+const routes = createBrowserRouter([
+    {
+        path: "/",
+        element: <Dashboard />,
+        children: [
+            {
+                path: "",
+                element: <HomeRoute />,
+            },
+            {
+                path: "/research-and-development",
+                element: <ResearchAndDevelopmentRoute />,
+            },
+        ],
+    },
+]);
+
+export const AppRoutes = () => <RouterProvider router={routes} />;
