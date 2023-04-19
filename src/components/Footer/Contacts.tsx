@@ -47,9 +47,8 @@ export const Contacts = () => (
             />
         </ListItemButton>
         <ListItemButton
-            disabled
             component={Link}
-            href={"https://twitter.com/TheAlfurnative"}
+            href={"https://twitter.com/alfurnative"}
             rel={"noopener"}
             target={"_blank"}
         >
@@ -57,9 +56,9 @@ export const Contacts = () => (
                 <TwitterIcon />
             </ListItemIcon>
             <ListItemText
-                primary={"@TheAlfurnative"}
+                primary={"@alfurnative"}
                 secondary={
-                    "Our twitter has been suspended due to cryptobots. It'll be back"
+                    "Our twitter account with the latest news and announcements."
                 }
             />
         </ListItemButton>

@@ -2,6 +2,7 @@ import "@fontsource/roboto/latin.css";
 import "leaflet/dist/leaflet.css";
 import "leaflet/dist/leaflet";
 import "./main.css";
+import "./utilities/dayjs";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {

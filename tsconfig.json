@@ -16,9 +16,14 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "types": [
-      "unplugin-icons/types/react"
+      "unplugin-icons/types/react",
+      "vitest/globals",
+      "cypress"
     ]
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "node_modules/vitest/globals.d.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
