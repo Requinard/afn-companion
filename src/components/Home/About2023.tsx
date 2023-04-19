@@ -17,6 +17,8 @@ import {
     Typography,
 } from "@mui/material";
 import dayjs from "dayjs";
+import { useEffect, useState } from "react";
+import { useTimeout } from "usehooks-ts";
 
 import PartyIcon from "~icons/lucide/party-popper";
 import RoomIcon from "~icons/material-symbols/room-service";
@@ -25,7 +27,30 @@ import DayIcon from "~icons/mdi/calendar-today";
 
 const regDay = dayjs("2023-04-29T12:00:00.000+02:00");
 
+const getSubtitle = (): string => {
+    const now = dayjs();
+
+    if (now.isSameOrAfter(regDay, "minute")) {
+        return "Registration is open!";
+    } else if (now.isSame(regDay, "hour")) {
+        return `Registration is starting in ${regDay.diff(
+            now,
+            "second"
+        )} seconds`;
+    } else if (now.isSame(regDay, "day")) {
+        return `It's almost time! Registration is starting ${regDay.fromNow()}`;
+    } else {
+        return `That is ${regDay.fromNow()}.`;
+    }
+};
 export const About2023 = () => {
+    const [subtitle, setSubtitle] = useState(getSubtitle());
+
+    useEffect(() => {
+        const timeout = setTimeout(() => setSubtitle(getSubtitle()), 1000);
+
+        return () => clearTimeout(timeout);
+    });
     return (
         <Card>
             <CardHeader
@@ -38,7 +63,7 @@ export const About2023 = () => {
                 <AlertTitle>
                     Registration date: {regDay.format("LLL")}
                 </AlertTitle>
-                That is {regDay.fromNow()}.
+                {subtitle}
             </Alert>
             <CardContent>
                 <Stack spacing={2}>
