@@ -1,8 +1,6 @@
 import { fireEvent, renderHook, screen } from "@testing-library/react";
 import { afterEach, beforeEach, expect } from "vitest";
 import { Box } from "@mui/material";
-import { resolveBaseUrl } from "vite";
-import user from "@testing-library/user-event";
 
 import { useHasScrolled } from "./useHasScrolled";
 

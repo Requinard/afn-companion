@@ -18,7 +18,6 @@ import {
 } from "@mui/material";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
-import { useTimeout } from "usehooks-ts";
 
 import PartyIcon from "~icons/lucide/party-popper";
 import RoomIcon from "~icons/material-symbols/room-service";
@@ -26,6 +25,35 @@ import PremiumRoomIcon from "~icons/material-symbols/workspace-premium";
 import DayIcon from "~icons/mdi/calendar-today";
 
 const regDay = dayjs("2023-04-29T12:00:00.000+02:00");
+
+const regIsOpen = () => dayjs().isSameOrAfter(regDay);
+
+const RegButton = () => {
+    const [enabled, setEnabled] = useState(regIsOpen);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => setEnabled(regIsOpen()), 1000);
+
+        return () => clearTimeout(timeout);
+    });
+
+    if (!enabled) {
+        return null;
+    }
+    // Hey, nice to see you peeking at the code. Please keep this information for yourself ;)
+    return (
+        <Button
+            variant={"outlined"}
+            component={Link}
+            href={
+                "https://www.universe.com/events/alfurnative-edge-of-tomorrow-tickets-V4GKCM"
+            }
+            target={"_blank"}
+        >
+            Register here
+        </Button>
+    );
+};
 
 const getSubtitle = (): string => {
     const now = dayjs();
@@ -59,7 +87,11 @@ export const About2023 = () => {
                 avatar={<PartyIcon />}
                 sx={{ color: "primary.main" }}
             />
-            <Alert severity={"info"} title={regDay.toISOString()}>
+            <Alert
+                severity={"info"}
+                title={regDay.toISOString()}
+                action={<RegButton />}
+            >
                 <AlertTitle>
                     Registration date: {regDay.format("LLL")}
                 </AlertTitle>
