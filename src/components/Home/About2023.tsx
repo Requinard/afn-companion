@@ -158,7 +158,7 @@ export const About2023 = () => {
                         </Badge>
                     </ListItemIcon>
                     <ListItemText
-                        primary={"Superiour Room"}
+                        primary={"Superior Room"}
                         secondary={
                             "€445 per person, including breakfast and dinner"
                         }
