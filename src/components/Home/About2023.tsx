@@ -114,11 +114,6 @@ export const About2023 = () => {
                         are a tiny bit more expensive but also a little bigger).
                     </Typography>
                     <Typography>
-                        Ticket sale will begin halfway February, and in the
-                        meantime we will be looking for your opinion on, and
-                        interest in hosting experiences at AFN.
-                    </Typography>
-                    <Typography>
                         We will have a range of sponsor merch available, most of
                         which are still in production, so we can't say much yet
                         - but we're convinced you'll like them!

@@ -35,7 +35,8 @@ export const FAQ = () => (
         <Accordion>
             <AccordionSummary>Do you offer day tickets?</AccordionSummary>
             <AccordionDetails>
-                Yes we will! Seperate days, or both days!
+                Yes. You can book tickets for a single day or book a weekend
+                ticket.
             </AccordionDetails>
         </Accordion>
         <Accordion>
@@ -43,12 +44,6 @@ export const FAQ = () => (
             <AccordionDetails>
                 Yes there are! For a small contribution you can help us grow,
                 and get something in return.
-            </AccordionDetails>
-        </Accordion>
-        <Accordion>
-            <AccordionSummary>When will tickets be available?</AccordionSummary>
-            <AccordionDetails>
-                On Saturday the 28th at 12:00 in the midday.
             </AccordionDetails>
         </Accordion>
         <Accordion>
