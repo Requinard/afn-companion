@@ -3,6 +3,7 @@ image: node:lts
 # Functions that should be executed before the build script is run
 before_script:
   - yarn
+
 pages:
   script:
     - yarn run build
@@ -14,3 +15,5 @@ pages:
     # This ensures that only pushes to the default branch will trigger
     # a pages deploy
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+  tags:
+    - requinards-server
