@@ -14,8 +14,13 @@ import {
     StyledEngineProvider,
     ThemeProvider,
 } from "@mui/material";
+import * as Sentry from "@sentry/react";
 
 import { AppRoutes } from "./AppRoutes";
+
+Sentry.init({
+    dsn: "https://glet_0caac89adeda39c8003532392f262648@observe.gitlab.com:443/errortracking/api/v1/projects/46968305",
+});
 
 const theme = responsiveFontSizes(
     createTheme({

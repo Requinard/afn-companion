@@ -1,4 +1,4 @@
-import { Grid, useTheme } from "@mui/material";
+import { Button, Grid, useTheme } from "@mui/material";
 
 import { Row } from "../Layout/Row";
 
@@ -11,6 +11,7 @@ import { About2023 } from "./About2023";
 
 export const HomePage = () => {
     const theme = useTheme();
+    throw new Error("no");
     return (
         <>
             <Row

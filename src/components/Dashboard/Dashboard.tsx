@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import { Footer } from "../Footer";
 import { useAutoScroll } from "../../hooks";
+import { CustomErrorBoundary } from "../ErrorHandling/CustomErrorBoundary";
 
 import { Navigation, NavigationSpacer } from "./Navigation";
 
@@ -24,7 +25,9 @@ export const Dashboard = () => {
     return (
         <DashboardInner>
             <MainSection component={"main"} role={"main"}>
-                <Outlet />
+                <CustomErrorBoundary>
+                    <Outlet />
+                </CustomErrorBoundary>
                 <Footer />
                 <NavigationSpacer />
             </MainSection>

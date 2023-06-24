@@ -1,7 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { Dashboard, HomeRoute } from "./components";
-import { ResearchAndDevelopmentRoute } from "./components/ResearchAndDevelopment/ResearchAndDevelopmentRoute";
+import {
+    Dashboard,
+    HomeRoute,
+    ResearchAndDevelopmentRoute,
+} from "./components";
 
 const routes = createBrowserRouter([
     {
