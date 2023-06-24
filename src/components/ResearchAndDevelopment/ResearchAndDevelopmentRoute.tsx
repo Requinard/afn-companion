@@ -14,6 +14,8 @@ export const ResearchAndDevelopmentRoute = () => {
                 alignItems={"center"}
                 justifyContent={"center"}
                 minHeight={"100vh"}
+                maxWidth={"95vw"}
+                overflow={"none"}
                 flexDirection={"column"}
             >
                 <RDTEaser />

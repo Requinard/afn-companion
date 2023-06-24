@@ -1,13 +1,4 @@
-import {
-    Box,
-    Card,
-    CardContent,
-    CardMedia,
-    Container,
-    Grid,
-    Stack,
-    Typography,
-} from "@mui/material";
+import { Box, Card, CardContent, Typography } from "@mui/material";
 import { Image } from "mui-image";
 
 import { StaffData } from "./StaffData";

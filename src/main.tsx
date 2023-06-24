@@ -10,38 +10,41 @@ import {
     CssBaseline,
     darken,
     lighten,
+    responsiveFontSizes,
     StyledEngineProvider,
     ThemeProvider,
 } from "@mui/material";
 
 import { AppRoutes } from "./AppRoutes";
 
-const theme = createTheme({
-    palette: {
-        mode: "dark",
-        primary: {
-            light: lighten("#e912e3", 0.5),
-            main: "#e912e3",
-            dark: darken("#e912e3", 0.5),
-            contrastText: "#f1f1f1",
+const theme = responsiveFontSizes(
+    createTheme({
+        palette: {
+            mode: "dark",
+            primary: {
+                light: lighten("#e912e3", 0.5),
+                main: "#e912e3",
+                dark: darken("#e912e3", 0.5),
+                contrastText: "#f1f1f1",
+            },
         },
-    },
-    components: {
-        MuiCardHeader: {
-            defaultProps: {
-                titleTypographyProps: {
-                    color: "primary.main",
-                    variant: "h5",
+        components: {
+            MuiCardHeader: {
+                defaultProps: {
+                    titleTypographyProps: {
+                        color: "primary.main",
+                        variant: "h5",
+                    },
+                },
+            },
+            MuiContainer: {
+                defaultProps: {
+                    maxWidth: "xl",
                 },
             },
         },
-        MuiContainer: {
-            defaultProps: {
-                maxWidth: "xl",
-            },
-        },
-    },
-});
+    })
+);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
