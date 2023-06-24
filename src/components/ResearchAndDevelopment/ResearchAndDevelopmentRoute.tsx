@@ -4,7 +4,10 @@ import { RDTEaser } from "./RDTeaser";
 
 export const ResearchAndDevelopmentRoute = () => {
     return (
-        <Container>
+        <Container
+            sx={{ justifyContent: "center", display: "flex" }}
+            maxWidth={"md"}
+        >
             <Box
                 display={"flex"}
                 flex={1}

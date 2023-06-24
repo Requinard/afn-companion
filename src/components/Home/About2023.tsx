@@ -10,6 +10,7 @@ import {
     Link,
     List,
     ListItem,
+    ListItemButton,
     ListItemIcon,
     ListItemText,
     ListSubheader,
@@ -133,7 +134,7 @@ export const About2023 = () => {
             </CardActions>
             <List>
                 <ListSubheader>How to attend</ListSubheader>
-                <ListItem>
+                <ListItemButton disabled>
                     <ListItemIcon>
                         <Badge badgeContent={78} color={"primary"}>
                             <RoomIcon />
@@ -141,12 +142,10 @@ export const About2023 = () => {
                     </ListItemIcon>
                     <ListItemText
                         primary={"Comfort Room"}
-                        secondary={
-                            "€435 per person, including breakfast and dinner"
-                        }
+                        secondary={"Sold out!"}
                     />
-                </ListItem>
-                <ListItem>
+                </ListItemButton>
+                <ListItemButton disabled>
                     <ListItemIcon>
                         <Badge badgeContent={42} color={"primary"}>
                             <PremiumRoomIcon />
@@ -154,11 +153,9 @@ export const About2023 = () => {
                     </ListItemIcon>
                     <ListItemText
                         primary={"Superior Room"}
-                        secondary={
-                            "€445 per person, including breakfast and dinner"
-                        }
+                        secondary={"Sold out"}
                     />
-                </ListItem>
+                </ListItemButton>
                 <ListItem>
                     <ListItemIcon>
                         <DayIcon />

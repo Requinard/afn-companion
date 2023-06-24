@@ -1,36 +1,39 @@
-import { Grid } from "@mui/material";
+import {
+    Box,
+    Card,
+    CardContent,
+    CardMedia,
+    Container,
+    Grid,
+    Stack,
+    Typography,
+} from "@mui/material";
 import { Image } from "mui-image";
 
-import Hunter from "./assets/staff-hunter.png?height=500&format=avif&imagetools";
-import Lighty from "./assets/staff-lighty.png?height=500&format=avid&imagetools";
-import Avi from "./assets/staff-avi.png?height=500&format=avid&imagetools";
-import Dibs from "./assets/staff-dibs.png?height=500&format=avif&imagetools";
-import Mylune from "./assets/staff-mylunee.png?height=500&format=avif&imagetools";
-import Switch from "./assets/staff-switch.png?height=500&format=avif&imagetools";
+import { StaffData } from "./StaffData";
 
 type StaffMemberProps = {
     image: string;
+    body?: string;
 };
-const StaffMember = ({ image }: StaffMemberProps) => {
+const StaffMember = ({ image, body }: StaffMemberProps) => {
     return (
-        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
-            <Image
-                src={image}
-                duration={1000}
-                shiftDuration={100}
-                fit={"cover"}
-            />
-        </Grid>
+        <Card sx={{ minWidth: 400 }}>
+            <Image src={image} fit={"contain"} height={500} />
+            <CardContent>{body}</CardContent>
+        </Card>
     );
 };
 
 export const Staff = () => (
-    <Grid container>
-        <StaffMember image={Mylune} />
-        <StaffMember image={Switch} />
-        <StaffMember image={Avi} />
-        <StaffMember image={Dibs} />
-        <StaffMember image={Lighty} />
-        <StaffMember image={Hunter} />
-    </Grid>
+    <Box overflow={"auto"} maxWidth={"100vw"} py={2} px={8}>
+        <Typography variant={"h3"} gutterBottom>
+            Meet the staff
+        </Typography>
+        <Box flexDirection="row" gap={2} display={"flex"} flexWrap={"nowrap"}>
+            {StaffData.map((it) => (
+                <StaffMember image={it.image} body={it.body} key={it.image} />
+            ))}
+        </Box>
+    </Box>
 );
